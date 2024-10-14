@@ -15,8 +15,6 @@ function updateTime() {
 
 }
 
-
-
 let pretoriaElement = documentquerySelector("#pretoria");
 let pretoriaateElement = pretoriaElement.querySelector(".date");
 let parisTimeElement = pretorialement.querySelector(".Time");
@@ -27,6 +25,7 @@ pretoriaTimeElement.innerHTML = pretoriaTime.formant("h:mm:ss [<small>]A[<small>
 
 function updateCity(event) {
     let cityTimeZone = event.target.value;
+    if (cityTimeZone === "current") {}
     let cityTime = moment().tz(cityTimeZone);
     let cityName = cityTimeZone.replace("_", " ").split("/")[1];
     let citiesElement = document.querySelector("#cities");
